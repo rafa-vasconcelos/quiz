@@ -1,11 +1,11 @@
 * {
   box-sizing: border-box;
-  font-family: 'Karla', 'Inter', sans-serif;
+  font-family: "Karla", "Inter", sans-serif;
 }
 
 body {
   padding: 15px 50px 15px 60px;
-  background-color: #F5F7FB;
+  background-color: #f5f7fb;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,8 +17,8 @@ button {
 }
 
 hr {
-  color: #DBDEF0;
-  border: 0.794239px solid #DBDEF0;
+  color: #dbdef0;
+  border: 0.794239px solid #dbdef0;
 }
 
 .startpage {
@@ -34,34 +34,34 @@ hr {
   margin-top: 50%;
 }
 
-.startpage>h1 {
-  font-family: 'Karla', 'Inter', sans-serif;
+.startpage > h1 {
+  font-family: "Karla", "Inter", sans-serif;
   font-weight: bold;
   margin-bottom: 15px;
-  font-size: 2rem;       
+  font-size: 2rem;
 }
 
-.startpage>h3 {
-  font-family: 'Inter';
+.startpage > h3 {
+  font-family: "Inter";
   font-weight: 400;
   margin-top: 0px;
-  margin-bottom: 25px;    
+  margin-bottom: 25px;
 }
 
-.startpage>button {
+.startpage > button {
   color: white;
-  background: #4D5B9E;
+  background: #4d5b9e;
   width: 190px;
   height: 55px;
   border-radius: 15px;
   border: none;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 500;
   font-size: 16px;
   outline: none;
 }
 
-.questions>h3 {
+.questions > h3 {
   color: #293264;
   font-size: 1rem;
   max-width: 65 0px;
@@ -73,7 +73,7 @@ hr {
   margin-bottom: 15px;
 }
 
-.answers>button {
+.answers > button {
   display: flex;
   justify-content: space-around;
   align-content: center;
@@ -85,26 +85,26 @@ hr {
   border-radius: 10px;
   box-shadow: none;
   border: 1px solid #293264;
-  background-color: #F5F7FB;
+  background-color: #f5f7fb;
   font-size: 11px;
   font-weight: medium;
-  font-family: 'Inter';
+  font-family: "Inter";
   color: #293264;
-  outline: none;    
+  outline: none;
 }
 
 .clicker {
-  background-color: #D6DBF5 !important;
+  background-color: #d6dbf5 !important;
   border: none !important;
 }
 
 .green-answer {
-  background-color: #94D7A2 !important;
+  background-color: #94d7a2 !important;
   border: none !important;
 }
 
 .red-answer {
-  background-color: #F8BCBC !important;
+  background-color: #f8bcbc !important;
   opacity: 0.5;
   border: none !important;
 }
@@ -118,12 +118,12 @@ hr {
   gap: 4vw;
   align-items: center;
   justify-content: center;
-  margin-top: 25px
+  margin-top: 25px;
 }
 
-.score-board>button {
+.score-board > button {
   color: white;
-  background: #4D5B9E;
+  background: #4d5b9e;
   width: 140px;
   height: 35px;
   border-radius: 10px;
@@ -131,10 +131,10 @@ hr {
   font-family: Inter;
   font-weight: 600;
   font-size: 12px;
-  outline: none;    
+  outline: none;
 }
 
-.score-board>h4 {
+.score-board > h4 {
   color: #293264;
-  font-size: 15px;    
+  font-size: 15px;
 }
