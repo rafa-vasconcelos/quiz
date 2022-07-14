@@ -61,19 +61,19 @@ hr {
   outline: none;
 }
 
-.questions > h3 {
+.question > h3 {
   color: #293264;
   font-size: 1rem;
-  max-width: 65 0px;
+  max-width: 650px;
 }
 
-.answers {
+.answer {
   display: flex;
   gap: 12px;
   margin-bottom: 15px;
 }
 
-.answers > button {
+.answer > button {
   display: flex;
   justify-content: space-around;
   align-content: center;
@@ -87,7 +87,6 @@ hr {
   border: 1px solid #293264;
   background-color: #f5f7fb;
   font-size: 11px;
-  font-weight: medium;
   font-family: "Inter";
   color: #293264;
   outline: none;

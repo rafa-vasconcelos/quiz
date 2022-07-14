@@ -39,25 +39,36 @@ const App = () => {
     }
   }, [checkAnswers]);
 
-  const questions = () => {
-    const newArray = [];
-    for (let i = 0; i < 5; i++) {
-      newArray.push(
-        <Question
-          data={quizData[i]}
-          questionNumber={i}
-          checkAnswers={checkAnswers}
-          key={quizData[i].question}
-          scoreNumber={scoreNumber}
-        />
-      );
-    }
-    return newArray;
-  };
+  // const questions = () => {
+  //   const newArray = [];
+  //   for (let i = 0; i < 5; i++) {
+  //     newArray.push(
+  //       <Question
+  //         data={quizData[i]}
+  //         questionNumber={i}
+  //         checkAnswers={checkAnswers}
+  //         key={quizData[i].question}
+  //         scoreChanger={scoreChanger}
+  //       />
+  //     );
+  //   }
+  //   return newArray;
+  // };
 
-  const scoreNumber = (i, answer) => {
+  const scoreChanger = (i, answer) => {
     setScore((prevScore) => ({ ...prevScore, [i]: answer }));
   };
+
+  const questions = () =>
+    quizData.map((item, index) => (
+      <Question
+        data={item}
+        questionNumber={index}
+        checkAnswers={checkAnswers}
+        key={item.question}
+        scoreChanger={scoreChanger}
+      />
+    ));
 
   const clickCheckAnswers = () => {
     setCheckAnswers((prevState) => !prevState);

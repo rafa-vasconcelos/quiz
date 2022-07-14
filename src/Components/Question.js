@@ -1,10 +1,17 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect, useMemo } from "react";
 import { shuffle } from "lodash";
 import { nanoid } from "nanoid";
 import he from "he";
+import PropTypes from "prop-types";
 
 const Question = (props) => {
+  Question.propTypes = {
+    data: PropTypes.object,
+    checkAnswers: PropTypes.bool,
+    scoreChanger: PropTypes.func,
+    questionNumber: PropTypes.number,
+  };
+
   const [clickedAnswer, setClickedAnswer] = useState(-1);
 
   useEffect(() => setClickedAnswer(-1), [props.data]);
@@ -22,7 +29,7 @@ const Question = (props) => {
         id: "wrong-answer",
         onClick: (i, id) => () => {
           setClickedAnswer(i);
-          props.scoreNumber(props.questionNumber, id);
+          props.scoreChanger(props.questionNumber, id);
         },
       },
       {
@@ -30,7 +37,7 @@ const Question = (props) => {
         id: "wrong-answer",
         onClick: (i, id) => () => {
           setClickedAnswer(i);
-          props.scoreNumber(props.questionNumber, id);
+          props.scoreChanger(props.questionNumber, id);
         },
       },
       {
@@ -38,7 +45,7 @@ const Question = (props) => {
         id: "wrong-answer",
         onClick: (i, id) => () => {
           setClickedAnswer(i);
-          props.scoreNumber(props.questionNumber, id);
+          props.scoreChanger(props.questionNumber, id);
         },
       },
       {
@@ -46,7 +53,7 @@ const Question = (props) => {
         id: nanoid(),
         onClick: (i, id) => () => {
           setClickedAnswer(i);
-          props.scoreNumber(props.questionNumber, id);
+          props.scoreChanger(props.questionNumber, id);
         },
       },
     ]);
@@ -80,9 +87,9 @@ const Question = (props) => {
   ));
 
   return (
-    <div className="questions">
+    <div className="question">
       <h3>{he.decode(props.data.question)}</h3>
-      <div className="answers">{buttons}</div>
+      <div className="answer">{buttons}</div>
       <hr />
     </div>
   );
